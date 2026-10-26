@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hager Magdy</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="variables.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="hero_header">
+            <div class="wrapper">
+                <header>
+                    <div class="logo">
+                        <i class="fa solid fa-h"></i>
+                        <div class="logo-text">Hager Magdy</div>
+                    </div>
+                    <nav>
+                        <div class="togglebtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="navlinks">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">CV</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="container">
+                    <div class="hero-text">
+                        <h5>Hello, I'm <span class="input">Flutter Developer</span></h5>
+                        <h1>Hager Magdy</h1>
+                        <p>I'm a Flutter developer with a passion for creating beautiful and 
+                            functional mobile applications. I have experience in building cross-platform apps using Flutter and Dart, and I'm always eager to learn new technologies and improve my skills.
+                        </p>
+                        <div class="btn-group">
+                            <a href="assets\cv\Hager Magdy Ahmed.pdf" class=" active" target="_blank">Download</a>
+                            <a href="mailto:hagermm2001@gmail.com" class="btn" target="_blank">Contact me</a>
+                        </div>
+
+                        <div class="social">
+                            <a href="https://www.facebook.com/gogo.magdy.399041" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/hager-magdy-83230b23a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/hagermagdy201" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.behance.net/hagermagdy14" target="_blank"><i class="fa-brands fa-behance"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-pic">
+                        <img src="assets\imgs\cf5f68d2702c3f5ef469d8034319acdf.jpg" alt="profile pic">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/3.0.0/typed.umd.js"></script>
+        <script>
+            var togglebtn = document.querySelector('.togglebtn');
+            var nav= document.querySelector('.navlinks');
+            var links = document.querySelectorAll('.navlinks li');
+
+            togglebtn.addEventListener('click', function(){
+                this.classList.toggle('click');
+                nav.classList.toggle('open');
+                
+            });
+
+            var typed = new Typed('.input', {
+                strings: ['Flutter Developer', 'UI/UX Designer', 'Coding & Robotics Instructor'],
+                typeSpeed: 100,
+                backSpeed: 60,
+                loop: true
+            });
+        </script>
+
+    </body>
+</html>
