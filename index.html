@@ -10,29 +10,34 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     </head>
+    <header>
+        <div class="wrapper header-wrapper">
+            <div class="logo">
+                <i class="fa solid fa-h"></i>
+                <div class="logo-text">Hager Magdy</div>
+            </div>
+            <nav>
+                <div class="togglebtn">
+                    <i class="fa-solid fa-bars open-icon"></i>
+                    <i class="fa-solid fa-xmark close-icon"></i>
+                </div>
+                <ul class="navlinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">ُExperience</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+                    
+    </header>
     <body>
-        <div class="hero_header">
+        
+        <!-- Home Section -->
+        <section class="Home_sec">
             <div class="wrapper">
-                <header>
-                    <div class="logo">
-                        <i class="fa solid fa-h"></i>
-                        <div class="logo-text">Hager Magdy</div>
-                    </div>
-                    <nav>
-                        <div class="togglebtn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <ul class="navlinks">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">CV</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </header>
+                
                 <div class="container">
                     <div class="hero-text">
                         <h5>Hello, I'm <span class="input">Flutter Developer</span></h5>
@@ -58,7 +63,93 @@
                     
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="wrapper">
+                <div class="about-container">
+                    <div class="about-text-side">
+                        <h2>Turning Ideas into Flutter Apps</h2>
+                        <p>
+                             I'm a Software Engineer and Flutter Developer based in Cairo, Egypt, specializing in building high-performance cross-platform apps using Dart, BLoC, and Clean Architecture. My work includes award-winning solutions like <strong>CV2Career</strong>, an ITIDA-funded graduation project.
+                        </p>
+                           Passionate about clean code, problem-solving, and mentoring young minds in coding and robotics.
+                        </p>
+
+                        <div class="education-card">
+                            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="edu-info">
+                                <span class="edu-date">Ain Shams University · 2020 – 2024</span>
+                                <h3>Bachelor of Computer and Information Science</h3>
+                                <p><strong>Graduation Project:</strong> CV2CareerAn AI-powered platform where users upload their CVs to convert them into ATS-friendly formats, match with the most relevant job opportunities, and get personalized course recommendations to boost their skills.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cards-side">
+                        <div class="stat-card">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <h3>2+ Yrs</h3>
+                            <p>Hands-on Flutter</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fa-solid fa-robot"></i>
+                            <h3>2+ Yrs</h3>
+                            <p>Coding & Robotics Coach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- work Experience -->
+        <section class="experience-section" id="experience">
+            <div class="wrapper">
+                <div class="section-title">
+                    <h2>Work Experience</h2>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="card-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Aug 2025 - Present</span>
+                                <span><i class="fa-solid fa-briefcase"></i> Freelance</span>
+                            </div>
+                            <h3>Freelance Flutter Developer</h3>
+                            <p class="company-role">Self- employed</p>
+                            <p class="card-desc">
+                                Building Flutter mobile apps end to end, from architecture and state management to API integration and production-ready features.
+                            </p>
+                            <ul class="experience-list">
+                                <li>Developed <strong>Mind Test App</strong>, a dynamic quiz application featuring multiple categories and an interactive 5-question per session system with real-time correct/incorrect sound effects and expressive visual feedback.</li>
+                                <li>Built full CRUD functionality enabling users to seamlessly add, edit, and delete custom categories and questions to personalize the quiz experience.</li>
+                                <li>Integrated <strong>Firebase</strong> backend to securely store, retrieve, and manage test data and user-generated content in real time.</li>
+                                <li>Added an interactive giveaway section allowing users to scroll through available rewards, view details, and dynamically manage or update the list of giveaways.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="card-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 2024 - Present</span>
+                                <span><i class="fa-solid fa-briefcase"></i> Full-Time</span>
+                            </div>
+                            <h3>Coding & Robotics Instructor</h3>
+                            <p class="company-role">LogiClub</p>
+                            <p class="card-desc">
+                                Teaching coding and logic to kids through a creative, art-inspired STEM approach. Using interactive kids' kits and gamified engineering challenges to transform complex programming concepts into intuitive, hands-on learning experiences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/3.0.0/typed.umd.js"></script>
         <script>
             var togglebtn = document.querySelector('.togglebtn');
@@ -66,10 +157,19 @@
             var links = document.querySelectorAll('.navlinks li');
 
             togglebtn.addEventListener('click', function(){
-                this.classList.toggle('click');
-                nav.classList.toggle('open');
-                
-            });
+    this.classList.toggle('click');
+    nav.classList.toggle('open');
+
+    // تبديل الأيقونة بين الشرط و الـ X
+    var icon = this.querySelector('i');
+    if (this.classList.contains('click')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+    } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    }
+});
 
             var typed = new Typed('.input', {
                 strings: ['Flutter Developer', 'UI/UX Designer', 'Coding & Robotics Instructor'],
