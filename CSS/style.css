@@ -21,18 +21,33 @@ body {
 @media (max-width: 930px) {
 
     /* =============== Home Section ================= */
-
     nav .navlinks {
+        display: flex;
+        flex-direction: column; 
         position: fixed;
         top: 0;
         right: -100%;
-        width: 60%;
+        width: 75%;      
         height: 100vh;
         background-color: var(--bg-color);
-        z-index: 9999 !important; /* القائمة تحت */
+        z-index: 9999 !important;
         box-shadow: -5px 0 15px rgba(0,0,0,0.15);
         transition: 0.5s ease-in-out;
-        padding-top: 100px;
+        padding-top: 60px;
+    }
+
+    nav .navlinks li {
+        display: block;    
+        margin: 15px 0;      
+        text-align: center;
+        width: 100%;
+    }
+
+    nav .navlinks li a {
+        font-size: 20px;
+        color: var(--text-primary);
+        display: block;
+        width: 100%;
     }
 
     .togglebtn {
@@ -76,21 +91,24 @@ body {
     /* =============== About Section ================= */
 
     .about-container {
-        flex-direction: column;
+        flex-direction: column; 
+        flex-wrap: wrap;
     }
     .about-text-side, .about-cards-side {
         width: 100%;
+        flex: unset; 
     }
 
-    /* =============== Projects Section ================= */
-
-    .project-card {
-        flex: 0 0 calc((60% - 24px) / 2);
-        min-width: calc((60% - 24px) / 2);
-    }
 }
 
 @media (max-width: 768px) {
+
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     .container {
         flex-direction: column;
         padding-top: 2rem;
@@ -98,8 +116,11 @@ body {
     }
     
     .container .hero-pic {
-        order: 1; 
-        margin-bottom: 20px;
+        width: 100%;       
+        max-width: 300px;  
+        height: 250px;    
+        border-width: 8px;
+        margin: 0 auto;   
     }
 
     .container .hero-text {
@@ -107,6 +128,7 @@ body {
         align-items: center;
         padding: 0 0 40px 0;
     }
+
 
     .hero-text .social {
         justify-content: center;
@@ -120,25 +142,31 @@ body {
     /* ======== Work Experience Section ========== */
 
     .timeline-container {
-        padding-left: 20px;
-    }
-    .timeline-line {
-        left: 0;
-    }
-    .timeline-dot {
-        left: -27px;
+        padding-left: 25px; 
+        margin: 0 10px;    
     }
 
-    /* =============== Projects Section ================= */
-    .project-card {
-        flex: 0 0 60%;
-        min-width: 60%;
+    .timeline-line {
+        left: 5px;    
     }
-    .prev-btn { left: 5px; }
-    .next-btn { right: 5px; }
+
+    .timeline-dot {
+        left: -22px;  
+    }
+
+    .timeline-card {
+        padding: 20px;    
+    }
+
+    .card-meta {
+        flex-direction: column; 
+        gap: 5px;
+    }
+
 }
 
 @media (max-width: 480px) {
+
     .wrapper {
         padding: 0 10px;
     }
@@ -146,13 +174,6 @@ body {
     .hero-text h1 {
         font-size: 2.2rem;
     }
-
-    .container .hero-pic {
-        width: 220px;
-        height: 220px;
-        border-width: 10px;
-    }
-
     .btn-group .btn {
         padding: 10px 18px;
         font-size: 14px;
@@ -163,10 +184,4 @@ body {
         grid-template-columns: 1fr; 
     }
 
-    /* =============== Projects Section ================= */
-
-    .project-card {
-        flex: 0 0 100%;
-        min-width: 100%;
-    }
 }

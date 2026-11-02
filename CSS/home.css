@@ -5,10 +5,11 @@
 }
 
 .wrapper {
-    width: 1280px;
-    max-width: 95%;
+    width: 100%;
+    max-width: 1280px; /* أقصى عرض له على اللابتوب والشاشات الكبيرة */
     margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box; /* لضمان أن الـ padding لا يتسبب في زيادة العرض */
 }
 
 header {
@@ -17,15 +18,17 @@ header {
     width: 100%;
     background-color: var(--bg-color);
     z-index: 1000;
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
     transition: all 0.3s ease;
+    box-sizing: border-box; /* مهم جداً عشان الـ padding ما يزودش العرض عن 100% */
 }
 
 .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 20px; 
+    padding: 20px 15px; /* قللنا البادينج شوية على الموبايل عشان يدي مساحة مريحة للمحتوى */
+    width: 100%;
+    box-sizing: border-box;
     flex-wrap: nowrap;
 }
 
@@ -72,7 +75,6 @@ nav .togglebtn span {
 
 nav .navlinks {
     list-style-type: none;
-   
 }
 
 nav .navlinks li {

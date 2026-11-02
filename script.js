@@ -3,8 +3,8 @@ var nav= document.querySelector('.navlinks');
 var links = document.querySelectorAll('.navlinks li');
 
 togglebtn.addEventListener('click', function(){
-this.classList.toggle('click');
-nav.classList.toggle('open');
+    this.classList.toggle('click');
+    nav.classList.toggle('open');
 
     var icon = this.querySelector('i');
     if (this.classList.contains('click')) {
@@ -14,6 +14,21 @@ nav.classList.toggle('open');
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
     }
+});
+
+const navLinks = document.querySelectorAll('nav .navlinks li a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        nav.classList.remove('open');
+        toggleBtn.classList.remove('click');
+        
+        var icon = toggleBtn.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
+    });
 });
 
 var typed = new Typed('.input', {
