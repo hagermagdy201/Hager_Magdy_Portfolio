@@ -6,7 +6,6 @@ togglebtn.addEventListener('click', function(){
 this.classList.toggle('click');
 nav.classList.toggle('open');
 
-    // تبديل الأيقونة بين الشرط و الـ X
     var icon = this.querySelector('i');
     if (this.classList.contains('click')) {
         icon.classList.remove('fa-bars');
