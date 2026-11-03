@@ -202,14 +202,13 @@
 }
 
 .next-btn {
-  right: -65px; /* تعديل مسافة الزر اليمين عشان يكون مظبوط داخل الحاوية */
+  right: -65px; 
 }
 
 
 /* ================= Responsive Design ================= */
 
 @media (max-width: 1024px) {
-  /* في الشاشات المتوسطة والتابلت، نعرض كارتين بجانب بعض */
   .project-card {
     flex: 0 0 calc((100% - 24px) / 2);
     min-width: calc((100% - 24px) / 2);
@@ -217,18 +216,17 @@
 }
 
 @media (max-width: 768px) {
-  /* في الموبايل، نعرض كارت واحد يملأ الشاشة لتصميم أنظف وأسهل للقراءة */
   .project-card {
     flex: 0 0 100%;
     min-width: 100%;
   }
   .prev-btn { left: 0px; }
-  .next-btn { right: 0px; }
+  .next-btn { right: -40px; }
 }
 
 @media (max-width: 480px) {
   .project-card {
     flex: 0 0 100%;
-    min-width: 100%; /* تم تصحيح الخطأ القديم (كانت 10%) */
+    min-width: 100%; 
   }
 }
