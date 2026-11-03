@@ -229,4 +229,6 @@
     flex: 0 0 100%;
     min-width: 100%; 
   }
+  .prev-btn { left: 0px; }
+  .next-btn { right: -40px; }
 }

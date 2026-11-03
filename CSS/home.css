@@ -1,15 +1,15 @@
 .Home_sec {
     width: 100%;
-    min-height: 90vh;
+    padding: 50px 0;
     background: var(--bg-color);
 }
 
 .wrapper {
     width: 100%;
-    max-width: 1280px; /* أقصى عرض له على اللابتوب والشاشات الكبيرة */
+    max-width: 1280px; 
     margin: 0 auto;
     padding: 0 20px;
-    box-sizing: border-box; /* لضمان أن الـ padding لا يتسبب في زيادة العرض */
+    box-sizing: border-box; 
 }
 
 header {
@@ -19,14 +19,14 @@ header {
     background-color: var(--bg-color);
     z-index: 1000;
     transition: all 0.3s ease;
-    box-sizing: border-box; /* مهم جداً عشان الـ padding ما يزودش العرض عن 100% */
+    box-sizing: border-box; 
 }
 
 .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15px; /* قللنا البادينج شوية على الموبايل عشان يدي مساحة مريحة للمحتوى */
+    padding: 20px 15px; 
     width: 100%;
     box-sizing: border-box;
     flex-wrap: nowrap;
@@ -114,7 +114,6 @@ nav .navlinks li a:hover {
     height: 100%;
     transition: 0.5s;
     object-fit: cover;
-    /* object-position: 10% center; */
 }
 
 .hero-pic img:hover {
